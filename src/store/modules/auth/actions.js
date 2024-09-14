@@ -1,7 +1,7 @@
 export default {
   async signup(context, payload) {
     const responseData = await handleAuthUser(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCG7soLV0EjJ5Dv-xAk23BokcL26cL4oA0',
+      'https://identitytoolkit.googleapis.com/v1/accounts:signUp',
       payload
     );
     context.commit('setUser', {
@@ -12,7 +12,7 @@ export default {
   },
   async login(context, payload) {
     const responseData = await handleAuthUser(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCG7soLV0EjJ5Dv-xAk23BokcL26cL4oA0',
+      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword',
       payload
     );
 
