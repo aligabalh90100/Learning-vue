@@ -1,0 +1,18 @@
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store/index.js';
+import BaseButton from './components/layout/ui/BaseButton.vue';
+import BaseCard from './components/layout/ui/BaseCard.vue';
+import BaseBadge from './components/layout/ui/BaseBadge.vue';
+import BaseSpinner from './components/layout/ui/BaseSpinner.vue';
+import BaseDialog from './components/layout/ui/BaseDialog.vue';
+const app = createApp(App);
+app.component('BaseDialog', BaseDialog);
+app.component('BaseSpinner', BaseSpinner);
+app.component('BaseBadge', BaseBadge);
+app.component('BaseButton', BaseButton);
+app.component('BaseCard', BaseCard);
+app.use(store);
+app.use(router);
+app.mount('#app');
